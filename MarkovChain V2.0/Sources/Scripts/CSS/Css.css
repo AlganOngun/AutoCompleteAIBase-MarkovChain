@@ -1,0 +1,71 @@
+﻿header.type1 {
+    text-align: center;
+    font-size: 50pt;
+    font-size: 4.341vw;
+    font-family: "Roboto Black";
+    background: #EEF4ED;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 1px rgba(0, 0, 0, 0.05);
+}
+
+input.type1[type=text] {
+    font-family: "Roboto Thin";
+    font-size: 25pt;
+    width: 1000pt;
+    height: 70pt;
+    text-align: center;
+    outline: none;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+input.type1:focus[type = text] {
+
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.36);
+    outline: none;
+}
+
+div.center {
+    text-align: center;
+    margin-top: 85pt;
+}
+
+li.type1 {
+    font-family: "Roboto Medium";
+    font-size: 25pt;
+    text-transform: capitalize;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #134074;
+    margin-left: -60px;
+}
+
+div.listDiv {
+    display: table;
+    text-align: center;
+}
+
+ul{
+    position: absolute;
+    text-align: center;
+}
+
+body {
+    background-color: #8DA9C4;
+}
+
+img.icon[type = gearIcon] {
+    width: 50pt;
+    height: 50pt;
+    margin-left: 1400px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+
+textarea[type = modalTextArea]{
+    text-align: center;
+   width: 465px;
+    height: 25px;
+}

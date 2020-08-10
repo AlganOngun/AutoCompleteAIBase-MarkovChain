@@ -1,0 +1,57 @@
+﻿<html lang = "tr">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Kelime Devam
+	</title>
+	<link rel="stylesheet" type="text/css" href="Sources/Scripts/CSS/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Sources/Scripts/CSS/Css.css">
+	<script type="text/javascript" src="Sources/Scripts/Javascript/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="Sources/Scripts/Javascript/uı.js"></script>
+	<script type="text/javascript" src="Sources/Scripts/Javascript/chain.js"></script>
+	<script type="text/javascript" src="Sources/Scripts/Javascript/bootstrap.bundle.js"></script>
+</head>
+<body>
+<header class="type1">Devamını istediğiniz cümleyi yazınız:</header>
+<div class="center">
+	<input class="type1" type="text" placeholder="Write here for auto complete" id="completeInput">
+	<div class="listDiv">
+		<ul class="list"></ul>
+	</div>
+</div>
+
+<!--Modal-->
+<div id="AddModal" class="modal fade" role="dialog">
+
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">TRAIN AI</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<textarea id="textArea" class = "addArea" type = "modalTextArea" onsubmit="getTextfromTextArea()"></textarea>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" onclick="Clear('#textArea')" data-dismiss="modal">Close</button>
+				<button id="trainButton" type="button" class="btn btn-primary" onclick="getTextfromTextArea(),Clear('#textArea')" data-dismiss="modal">Train</button>
+				<script>
+					document.addEventListener("keydown",function (event) {
+						if(event.keyCode == 13){
+							$('#trainButton').click();
+						}
+					})
+				</script>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!--/Modal-->
+<img class="icon" type="gearIcon" src="Sources/Images/Icons/gearIcon.png" data-toggle = "modal" data-target = "#AddModal">
+<script type="text/javascript">init()</script>
+</body>
+</html>
